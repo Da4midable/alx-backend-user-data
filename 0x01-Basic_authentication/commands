@@ -3,7 +3,6 @@
  1997  locale-gen
  1998  locale -a
  1999  apt install python3-poetry
- 2000  git clone https://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@github.com/Da4midable/alx-backend-user-data.git
  2001  history | grep venv
  2002  cd 0x01-Basic_authentication/
  2003  python3 python3 -m venv venv && source venv/bin/activate
