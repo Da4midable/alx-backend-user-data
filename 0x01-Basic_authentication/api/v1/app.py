@@ -42,6 +42,7 @@ def not_allowed(error) -> str:
 
 @app.before_request
 def filter_request() -> Optional[None]:
+    """filters request"""
     current_path = request.path
     excluded_paths = ['/api/v1/status/',
                       '/api/v1/unauthorized/', '/api/v1/forbidden/']
