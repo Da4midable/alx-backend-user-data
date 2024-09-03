@@ -21,7 +21,7 @@ def not_found(error) -> str:
     return jsonify({"error": "Not found"}), 404
 
 @app.errorhandler(403)
-def not_authorized(error) -> tuple[Response, int]:
+def not_allowed(error) -> tuple[Response, int]:
     """
     Not authorized handler
     """
