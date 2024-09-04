@@ -1,0 +1,500 @@
+models/base.py:        return cls.search()
+models/base.py:    def search(cls, attributes: dict = {}) -> List[TypeVar('Base')]:
+models/base.py:        def _search(obj):
+models/base.py:        return list(filter(_search, DATA[s_class].values()))
+venv/lib/python3.10/site-packages/anyio/_core/_typedattr.py:        :raises ~anyio.TypedAttributeLookupError: if the search failed and no default
+venv/lib/python3.10/site-packages/fastapi/openapi/docs.py:                qp = location.search.substring(1);
+venv/lib/python3.10/site-packages/chardet/universaldetector.py:            if self.HIGH_BYTE_DETECTOR.search(byte_str):
+venv/lib/python3.10/site-packages/chardet/universaldetector.py:                    self.ESC_DETECTOR.search(self._last_char + byte_str):
+venv/lib/python3.10/site-packages/chardet/universaldetector.py:            if self.WIN_BYTE_DETECTOR.search(byte_str):
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:    """Searchable snapshot of distributions on a search path"""
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:            self, search_path=None, platform=get_supported_platform(),
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        """Snapshot distributions available on a search path
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        Any distributions found on `search_path` are added to the environment.
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        `search_path` should be a sequence of ``sys.path`` items.  If not
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        self.scan(search_path)
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:    def scan(self, search_path=None):
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        """Scan `search_path` for distributions usable in this environment
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        `search_path` should be a sequence of ``sys.path`` items.  If not
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        if search_path is None:
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:            search_path = sys.path
+venv/lib/python3.10/site-packages/pkg_resources/__init__.py:        for item in search_path:
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:    def searchString( self, instring, maxMatches=_MAX_INT ):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        C{maxMatches} argument, to clip searching after 'n' matches are found.
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:            print(cap_word.searchString("More than Iron, more than Lead, more than Gold I need Electricity"))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:            print(sum(cap_word.searchString("More than Iron, more than Lead, more than Gold I need Electricity")))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(qs.searchString('lsjdf "This is the quote" sldjf'))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(complex_qs.searchString('lsjdf {{This is the "quote"}} sldjf'))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(sql_qs.searchString('lsjdf "This is the quote with ""embedded"" quotes" sldjf'))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for t in (LineStart() + 'AAA' + restOfLine).searchString(test):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789"))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789")) #  Fail! -> [['123'], ['3'], ['1416'], ['789']]
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789")) #  Better -> [['123'], ['3.1416'], ['789']]
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for tkt in ticket_expr.searchString(report):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        print(comparison_expr.searchString("B = 12  AA=23 B<=AA AA>12"))
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:            print(patt.searchString(src)[0])
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for match in locatedExpr(wd).searchString("ljsdf123lksdjjf123lkkjj1222"):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for link in link_expr.searchString(text):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for grid_header in grid_expr.searchString(html):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for div_header in div_expr.searchString(html):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for grid_header in grid_expr.searchString(html):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for div_header in div_expr.searchString(html):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/pyparsing.py:        for func in c_function.searchString(source_code):
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/specifiers.py:        match = self._regex.search(spec)
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/specifiers.py:        match = _prefix_regex.search(item)
+venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py:        match = self._regex.search(version)
+venv/lib/python3.10/site-packages/pkg_resources/extern/__init__.py:    def search_path(self):
+venv/lib/python3.10/site-packages/pkg_resources/extern/__init__.py:        Iterate over the search path to locate and load fullname.
+venv/lib/python3.10/site-packages/pkg_resources/extern/__init__.py:        for prefix in self.search_path:
+venv/lib/python3.10/site-packages/pycparser/ast_transforms.py:            # find what we're looking for at this point; give up the search
+venv/lib/python3.10/site-packages/pycparser/ply/cpp.py:    # Adds a search path to the preprocessor.
+venv/lib/python3.10/site-packages/pycparser/_build_tables.py:# Insert '.' and '..' as first entries to the search path for modules.
+venv/lib/python3.10/site-packages/typing_extensions-4.12.2.dist-info/LICENSE:National Research Initiatives (CNRI, see https://www.cnri.reston.va.us)
+venv/lib/python3.10/site-packages/typing_extensions-4.12.2.dist-info/LICENSE:Research Initiatives, having an office at 1895 Preston White Drive,
+venv/lib/python3.10/site-packages/typing_extensions-4.12.2.dist-info/LICENSE:1995-2001 Corporation for National Research Initiatives; All Rights
+venv/lib/python3.10/site-packages/werkzeug/debug/__init__.py:            match = re.search(b'"serial-number" = <([^>]+)', dump)
+venv/lib/python3.10/site-packages/werkzeug/datastructures/headers.py:    if _newline_re.search(value) is not None:
+venv/lib/python3.10/site-packages/werkzeug/http.py:        match = _continuation_re.search(pk)
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:        for search_path, loader in self.exports:
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:            if search_path == path:
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:            if not search_path.endswith("/"):
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:                search_path += "/"
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:            if path.startswith(search_path):
+venv/lib/python3.10/site-packages/werkzeug/middleware/shared_data.py:                real_filename, file_loader = loader(path[len(search_path) :])
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:# subsequent search
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:        self._search_position = 0
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:            match = self.preamble_re.search(self.buffer, self._search_position)
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                self._search_position = 0
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # Update the search start position to be equal to the
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # current buffer length (already searched) minus a
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # safe buffer for part of the search target.
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                self._search_position = max(
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:            match = BLANK_LINE_RE.search(self.buffer, self._search_position)
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                self._search_position = 0
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # Update the search start position to be equal to the
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # current buffer length (already searched) minus a
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                # safe buffer for part of the search target.
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:                self._search_position = max(0, len(self.buffer) - SEARCH_EXTRA_LENGTH)
+venv/lib/python3.10/site-packages/werkzeug/sansio/multipart.py:            match = self.boundary_re.search(data)
+venv/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py:                if HEADER_RE.search(name):
+venv/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py:                if HEADER_VALUE_RE.search(value):
+venv/lib/python3.10/site-packages/python_dotenv-1.0.1.dist-info/METADATA:You can use dotenv in IPython.  By default, it will use `find_dotenv` to search for a
+venv/lib/python3.10/site-packages/python_dotenv-1.0.1.dist-info/METADATA:-   Fix find\_dotenv - it now start search from the file where this
+venv/lib/python3.10/site-packages/multipart/multipart.py:                # need to efficiently search for our boundary, since any data
+venv/lib/python3.10/site-packages/multipart/multipart.py:                # search through the remainder of the buffer looking for our
+venv/lib/python3.10/site-packages/multipart/multipart.py:                # search.
+venv/lib/python3.10/site-packages/pip/_internal/utils/encoding.py:        if line[0:1] == b"#" and ENCODING_RE.search(line):
+venv/lib/python3.10/site-packages/pip/_internal/utils/encoding.py:            result = ENCODING_RE.search(line)
+venv/lib/python3.10/site-packages/pip/_internal/models/target_python.py:        :param platforms: A list of strings or None. If None, searches for
+venv/lib/python3.10/site-packages/pip/_internal/models/link.py:        match = self._egg_fragment_re.search(self._url)
+venv/lib/python3.10/site-packages/pip/_internal/models/link.py:        match = self._subdirectory_fragment_re.search(self._url)
+venv/lib/python3.10/site-packages/pip/_internal/models/link.py:        match = self._hash_re.search(self._url)
+venv/lib/python3.10/site-packages/pip/_internal/models/link.py:        match = self._hash_re.search(self._url)
+venv/lib/python3.10/site-packages/pip/_internal/models/search_scope.py:    Encapsulates the locations that pip is configured to search.
+venv/lib/python3.10/site-packages/pip/_internal/commands/index.py:from pip._internal.commands.search import print_dist_installation_info
+venv/lib/python3.10/site-packages/pip/_internal/commands/__init__.py:    "search": CommandInfo(
+venv/lib/python3.10/site-packages/pip/_internal/commands/__init__.py:        "pip._internal.commands.search",
+venv/lib/python3.10/site-packages/pip/_internal/commands/search.py:            raise CommandError("Missing required argument (search query).")
+venv/lib/python3.10/site-packages/pip/_internal/commands/search.py:        pypi_hits = self.search(query, options)
+venv/lib/python3.10/site-packages/pip/_internal/commands/search.py:    def search(self, query: List[str], options: Values) -> List[Dict[str, str]]:
+venv/lib/python3.10/site-packages/pip/_internal/commands/search.py:            hits = pypi.search({"name": query, "summary": query}, "or")
+venv/lib/python3.10/site-packages/pip/_internal/commands/show.py:        results = search_packages_info(query)
+venv/lib/python3.10/site-packages/pip/_internal/commands/show.py:def search_packages_info(query: List[str]) -> Iterator[_PackageInfo]:
+venv/lib/python3.10/site-packages/pip/_internal/req/constructors.py:        if link.scheme == "file" and re.search(r"\.\./", link.url):
+venv/lib/python3.10/site-packages/pip/_internal/req/req_file.py:from pip._internal.models.search_scope import SearchScope
+venv/lib/python3.10/site-packages/pip/_internal/req/req_file.py:        search_scope = SearchScope(
+venv/lib/python3.10/site-packages/pip/_internal/req/req_file.py:        finder.search_scope = search_scope
+venv/lib/python3.10/site-packages/pip/_internal/req/req_file.py:                if SCHEME_RE.search(filename):
+venv/lib/python3.10/site-packages/pip/_internal/req/req_file.py:                elif not SCHEME_RE.search(req_path):
+venv/lib/python3.10/site-packages/pip/_internal/vcs/versioncontrol.py:    Find the the Python project's root by searching up the filesystem from
+venv/lib/python3.10/site-packages/pip/_internal/vcs/subversion.py:            match = _svn_xml_url_re.search(data)
+venv/lib/python3.10/site-packages/pip/_internal/vcs/subversion.py:                match = _svn_info_xml_url_re.search(xml)
+venv/lib/python3.10/site-packages/pip/_internal/wheel_builder.py:    return bool(_egg_info_re.search(s))
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:from pip._internal.models.search_scope import SearchScope
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:        match = self._py_version_re.search(version)
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:    def search_scope(self) -> SearchScope:
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:        return self._link_collector.search_scope
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:    @search_scope.setter
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:    def search_scope(self, search_scope: SearchScope) -> None:
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:        self._link_collector.search_scope = search_scope
+venv/lib/python3.10/site-packages/pip/_internal/index/package_finder.py:        return self.search_scope.index_urls
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:from pip._internal.models.search_scope import SearchScope
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:        search_scope: SearchScope,
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:        self.search_scope = search_scope
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:        search_scope = SearchScope.create(
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:            search_scope=search_scope,
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:        return self.search_scope.find_links
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:            for loc in self.search_scope.get_index_urls_locations(project_name)
+venv/lib/python3.10/site-packages/pip/_internal/index/collector.py:                f"{len(lines)} location(s) to search "
+venv/lib/python3.10/site-packages/pip/_internal/metadata/pkg_resources.py:    def _search_distribution(self, name: str) -> Optional[BaseDistribution]:
+venv/lib/python3.10/site-packages/pip/_internal/metadata/pkg_resources.py:        This searches from *all* distributions available in the environment, to
+venv/lib/python3.10/site-packages/pip/_internal/metadata/pkg_resources.py:        dist = self._search_distribution(name)
+venv/lib/python3.10/site-packages/pip/_internal/metadata/pkg_resources.py:        return self._search_distribution(name)
+venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/resolver.py:    node twice (i.e. cycles). This is done through a depth-first search through
+venv/lib/python3.10/site-packages/pip/_internal/network/session.py:        # will not accept it as a valid location to search. We will however
+venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py:        search_scope = finder.search_scope
+venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py:        locations = search_scope.get_formatted_locations()
+venv/lib/python3.10/site-packages/pip/_vendor/html5lib/html5parser.py:                prompt = "This is a searchable index. Enter search keywords: "
+venv/lib/python3.10/site-packages/pip/_vendor/html5lib/filters/sanitizer.py:                (namespaces['xlink'], 'href') in attrs and re.search(r'^\s*[^#\s].*',
+venv/lib/python3.10/site-packages/pip/_vendor/html5lib/_inputstream.py:        # We have a valid meta element we want to search for attributes
+venv/lib/python3.10/site-packages/pip/_vendor/html5lib/serializer.py:                            quote_attr = _quoteAttributeSpec.search(v) is not None
+venv/lib/python3.10/site-packages/pip/_vendor/html5lib/serializer.py:                            quote_attr = _quoteAttributeLegacy.search(v) is not None
+venv/lib/python3.10/site-packages/pip/_vendor/chardet/universaldetector.py:            if self.HIGH_BYTE_DETECTOR.search(byte_str):
+venv/lib/python3.10/site-packages/pip/_vendor/chardet/universaldetector.py:                    self.ESC_DETECTOR.search(self._last_char + byte_str):
+venv/lib/python3.10/site-packages/pip/_vendor/chardet/universaldetector.py:            if self.WIN_BYTE_DETECTOR.search(byte_str):
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:    """Searchable snapshot of distributions on a search path"""
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:            self, search_path=None, platform=get_supported_platform(),
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        """Snapshot distributions available on a search path
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        Any distributions found on `search_path` are added to the environment.
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        `search_path` should be a sequence of ``sys.path`` items.  If not
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        self.scan(search_path)
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:    def scan(self, search_path=None):
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        """Scan `search_path` for distributions usable in this environment
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        `search_path` should be a sequence of ``sys.path`` items.  If not
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        if search_path is None:
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:            search_path = sys.path
+venv/lib/python3.10/site-packages/pip/_vendor/pkg_resources/__init__.py:        for item in search_path:
+venv/lib/python3.10/site-packages/pip/_vendor/idna/codec.py:    # Compatibility as a search_function for codecs.register()
+venv/lib/python3.10/site-packages/pip/_vendor/typing_extensions.py:        search order is locals first, then globals.
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=Hellenic Academic and Research Institutions RootCA 2011 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=Hellenic Academic and Research Institutions RootCA 2011 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Label: "Hellenic Academic and Research Institutions RootCA 2011"
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=Hellenic Academic and Research Institutions RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=Hellenic Academic and Research Institutions RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Label: "Hellenic Academic and Research Institutions RootCA 2015"
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=Hellenic Academic and Research Institutions ECC RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=Hellenic Academic and Research Institutions ECC RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Label: "Hellenic Academic and Research Institutions ECC RootCA 2015"
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=ISRG Root X1 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=ISRG Root X1 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=HARICA TLS RSA Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=HARICA TLS RSA Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Issuer: CN=HARICA TLS ECC Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/pip/_vendor/certifi/cacert.pem:# Subject: CN=HARICA TLS ECC Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/connection.py:        whereas a lookup without a trailing dot will search the system's search domain
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/connection.py:        match = _CONTAINS_CONTROL_CHAR_RE.search(method)
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/util/connection.py:    will perform a DNS search for both IPv6 and IPv4 records."""
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/util/url.py:                match = ZONE_ID_RE.search(host)
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/util/url.py:    if not SCHEME_RE.search(url):
+venv/lib/python3.10/site-packages/pip/_vendor/urllib3/packages/six.py:    __spec__.submodule_search_locations = []  # PEP 451 @UndefinedVariable
+venv/lib/python3.10/site-packages/pip/_vendor/rich/cells.py:    # Binary search until we find the right size
+venv/lib/python3.10/site-packages/pip/_vendor/rich/segment.py:            is_control (bool, optional): is_control flag to match in search.
+venv/lib/python3.10/site-packages/pip/_vendor/rich/text.py:            whitespace_match = _re_whitespace.search(self.plain)
+venv/lib/python3.10/site-packages/pip/_vendor/six.py:    __spec__.submodule_search_locations = []  # PEP 451 @UndefinedVariable
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/index.py:    def search(self, terms, operator=None):
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/index.py:            return rpc_proxy.search(terms, operator or 'and')
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/database.py:        :param category: The category to search for entries.
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/manifest.py:            if pattern_re.search(name):
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/manifest.py:            if pattern_re.search(f):
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/util.py:    m = ENTRY_RE.search(specification)
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/util.py:    m = PYTHON_VERSION.search(filename)
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/util.py:    if _CHECK_RECURSIVE_GLOB.search(path_glob):
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/util.py:    if _CHECK_MISMATCH_SET.search(path_glob):
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:        m = self._base.search(self.data)
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:        return self.platform_dependent.search(url)
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:                        m = CHARSET.search(content_type)
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:        :param path: The root of the directory tree to search.
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:                         is searched,
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:        :param distpath: A :class:`DistributionPath` instance to search.
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:        :param locators: The list of locators to search.
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:                         search from any of the locators is returned. If True,
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/locators.py:                    # weren't searched. Note that this only matters when
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/compat.py:        of os.environ.get("PATH"), or can be overridden with a custom search
+venv/lib/python3.10/site-packages/pip/_vendor/distlib/compat.py:        Lookups search the underlying mappings successively until a key is found.
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/modeline.py:    m = modeline_re.search(l)
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/lexers/python.py:        'sample', 'savetxt', 'sctype2char', 'searchsorted', 'seed', 'select',
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/util.py:    Note that this method automatically searches the whole string (eg:
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/util.py:        if regex.search(found) is not None:
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/util.py:    m = doctype_lookup_re.search(text)
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/util.py:        m = doctype_lookup_re.search(text)
+venv/lib/python3.10/site-packages/pip/_vendor/pygments/util.py:        rv = tag_re.search(text[:1000]) is not None
+venv/lib/python3.10/site-packages/pip/_vendor/distro.py:# Base file names to be ignored when searching for distro release file
+venv/lib/python3.10/site-packages/pip/_vendor/distro.py:          An empty string (the default) will cause a default search algorithm
+venv/lib/python3.10/site-packages/pip/_vendor/distro.py:            match = re.search(r"(\(\D+\))|,(\s+)?\D+", props["version"])
+venv/lib/python3.10/site-packages/pip/_vendor/distro.py:        match = re.search(r"^([^\s]+)\s+([\d\.]+)", lines[0].strip())
+venv/lib/python3.10/site-packages/pip/_vendor/distro.py:            # is somewhat more tolerant (compared to when searching for the
+venv/lib/python3.10/site-packages/pip/_vendor/packaging/specifiers.py:        match = self._regex.search(spec)
+venv/lib/python3.10/site-packages/pip/_vendor/packaging/specifiers.py:        match = _prefix_regex.search(item)
+venv/lib/python3.10/site-packages/pip/_vendor/packaging/version.py:        match = self._regex.search(version)
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/actions.py:        for grid_header in grid_expr.search_string(html):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/actions.py:        for div_header in div_expr.search_string(html):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/actions.py:        for grid_header in grid_expr.search_string(html):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/actions.py:        for div_header in div_expr.search_string(html):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/helpers.py:        print(comparison_expr.search_string("B = 12  AA=23 B<=AA AA>12"))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/helpers.py:            print(patt.search_string(src)[0])
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/helpers.py:        for match in locatedExpr(wd).searchString("ljsdf123lksdjjf123lkkjj1222"):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/helpers.py:        for func in c_function.search_string(source_code):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/helpers.py:        for link in link_expr.search_string(text):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        Recursion search naturally memoizes matches of ``Forward`` elements and may
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:    def search_string(
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        ``max_matches`` argument, to clip searching after 'n' matches are found.
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:            print(cap_word.search_string("More than Iron, more than Lead, more than Gold I need Electricity"))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:            print(sum(cap_word.search_string("More than Iron, more than Lead, more than Gold I need Electricity")))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:    searchString = search_string
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(qs.search_string('lsjdf "This is the quote" sldjf'))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(complex_qs.search_string('lsjdf {{This is the "quote"}} sldjf'))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(sql_qs.search_string('lsjdf "This is the quote with ""embedded"" quotes" sldjf'))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        for t in (LineStart() + 'AAA' + restOfLine).search_string(test):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(number.search_string("123 3.1416 789"))
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(number.search_string("123 3.1416 789")) #  Fail! -> [['123'], ['3'], ['1416'], ['789']]
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        print(number.search_string("123 3.1416 789")) #  Better -> [['123'], ['3.1416'], ['789']]
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        for t in (AtLineStart('AAA') + restOfLine).search_string(test):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        for match in Located(wd).search_string("ljsdf123lksdjjf123lkkjj1222"):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        for tkt in ticket_expr.search_string(report):
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:            # walk stack until parse_string, scan_string, search_string, or transform_string is found
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:                "search_string",
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        # - to *search* the bounded recursion level
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:        # and the two run concurrently. The *search* must *match* each recursion level
+venv/lib/python3.10/site-packages/pip/_vendor/pyparsing/core.py:                # we are searching for the best recursion expansion - keep on improving
+venv/lib/python3.10/site-packages/flask/cli.py:    to the search path and return the actual module name that is expected.
+venv/lib/python3.10/site-packages/flask/cli.py:    :param path: Load the file at this location instead of searching.
+venv/lib/python3.10/site-packages/flask/sansio/blueprints.py:        to the app's template search path. The path is relative to the
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:    if root_spec.submodule_search_locations:
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:            if package_spec is not None and package_spec.submodule_search_locations:
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:                    os.path.commonpath(package_spec.submodule_search_locations)
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:                search_location = next(
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:                    for location in root_spec.submodule_search_locations
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:                search_location = root_spec.submodule_search_locations[0]
+venv/lib/python3.10/site-packages/flask/sansio/scaffold.py:            return os.path.dirname(search_location)
+venv/lib/python3.10/site-packages/annotated_types-0.7.0.dist-info/METADATA:favor of introspectable methods such as `str.lower` or `re.compile("pattern").search`.
+venv/lib/python3.10/site-packages/passlib-1.7.4.dist-info/METADATA:`4D8592DF4CE1ED31 <http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4D8592DF4CE1ED31>`_.
+venv/lib/python3.10/site-packages/fastapi-0.112.2.dist-info/METADATA:<a href="https://github.com/deepset-ai/haystack/" target="_blank" title="Build powerful search from composable, open source building blocks"><img src="https://fastapi.tiangolo.com/img/sponsors/haystack-fastapi.svg"></a>
+venv/lib/python3.10/site-packages/click/_termui_impl.py:    # search or other commands inside less).
+venv/lib/python3.10/site-packages/click/termui.py:    system search path is used for finding the executable) it overrides
+venv/lib/python3.10/site-packages/click/shell_completion.py:        match = re.search(r"^(\d+)\.(\d+)\.\d+", output.stdout.decode())
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/METADATA:In pip 20.3, we've `made a big improvement to the heart of pip`_; `learn more`_. We want your input, so `sign up for our user experience research studies`_ to help us do it right.
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/METADATA:.. _sign up for our user experience research studies: https://pyfound.blogspot.com/2020/03/new-pip-resolver-to-roll-out-this-year.html
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/RECORD:pip/_internal/commands/__pycache__/search.cpython-310.pyc,,
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/RECORD:pip/_internal/commands/search.py,sha256=sbBZiARRc050QquOKcCvOr2K3XLsoYebLKZGRi__iUI,5697
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/RECORD:pip/_internal/models/__pycache__/search_scope.cpython-310.pyc,,
+venv/lib/python3.10/site-packages/pip-22.0.2.dist-info/RECORD:pip/_internal/models/search_scope.py,sha256=LwloG0PJAmtI1hFXIypsD95kWE9xfR5hf_a2v1Vw7sk,4520
+venv/lib/python3.10/site-packages/cffi/cparser.py:        match = _r_star_const_space.search(csource)
+venv/lib/python3.10/site-packages/cffi/cparser.py:        match = _r_extern_python.search(csource)
+venv/lib/python3.10/site-packages/cffi/parse_c_type.h:static int search_in_globals(const struct _cffi_type_context_s *ctx,
+venv/lib/python3.10/site-packages/cffi/parse_c_type.h:                             const char *search, size_t search_len);
+venv/lib/python3.10/site-packages/cffi/parse_c_type.h:static int search_in_struct_unions(const struct _cffi_type_context_s *ctx,
+venv/lib/python3.10/site-packages/cffi/parse_c_type.h:                                   const char *search, size_t search_len);
+venv/lib/python3.10/site-packages/passlib/utils/__init__.py:    # can stop search after 4 bytes, won't ever have longer utf8 sequence.
+venv/lib/python3.10/site-packages/passlib/utils/__init__.py:    m = re.search(r"(\d+(?:\.\d+)+)", source)
+venv/lib/python3.10/site-packages/passlib/tests/utils.py:        # NOTE: this doesn't do an exhaustive search to verify algorithm
+venv/lib/python3.10/site-packages/passlib/tests/test_handlers.py:#: modules where get_handler_case() should search for test cases.
+venv/lib/python3.10/site-packages/passlib/context.py:        #      could use dict-lookup to speed up this search.
+venv/lib/python3.10/site-packages/passlib/handlers/argon2.py:    #       but need to research the uses, what a more descriptive name would be,
+venv/lib/python3.10/site-packages/passlib/_data/wordsets/eff_long.txt:research
+venv/lib/python3.10/site-packages/passlib/_data/wordsets/bip39.txt:search
+venv/lib/python3.10/site-packages/passlib/totp.py:            How far backward and forward in time to search for a match.
+venv/lib/python3.10/site-packages/passlib/totp.py:            If specified, verify will never search earlier counters,
+venv/lib/python3.10/site-packages/passlib/totp.py:            optional expected value where search should start,
+venv/lib/python3.10/site-packages/passlib/totp.py:            to help speed up searches.
+venv/lib/python3.10/site-packages/typing_extensions.py:        search order is locals first, then globals.
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:# - store bytearray, offset, how far we've searched for a separator token
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:# - use the how-far-we've-searched data to avoid rescanning
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        self._next_line_search = 0
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        self._multiple_lines_search = 0
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        self._next_line_search = 0
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        self._multiple_lines_search = 0
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        # Only search in buffer space that we've not already looked at.
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        search_start_index = max(0, self._next_line_search - 1)
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        partial_idx = self._data.find(b"\r\n", search_start_index)
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:            self._next_line_search = len(self._data)
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        # Only search in buffer space that we've not already looked at.
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:        match = blank_line_regex.search(self._data, self._multiple_lines_search)
+venv/lib/python3.10/site-packages/h11/_receivebuffer.py:            self._multiple_lines_search = max(0, len(self._data) - 2)
+venv/lib/python3.10/site-packages/h11/_abnf.py:# See: https://www.rfc-editor.org/errata_search.php?rfc=7230&eid=4189
+venv/lib/python3.10/site-packages/websockets/http11.py:# See also https://www.rfc-editor.org/errata_search.php?rfc=7230&eid=4189
+venv/lib/python3.10/site-packages/websockets/legacy/http.py:# See also https://www.rfc-editor.org/errata_search.php?rfc=7230&eid=4189
+venv/lib/python3.10/site-packages/watchfiles/filters.py:        if any(r.search(entity_name) for r in self._ignore_entity_regexes):
+venv/lib/python3.10/site-packages/uvloop/_testbase.py:        return bool(re.search(str(self), other, re.S))
+venv/lib/python3.10/site-packages/jinja2/filters.py:        if _attr_key_re.search(key) is not None:
+venv/lib/python3.10/site-packages/jinja2/loaders.py:    A list of paths can be given. The directories will be searched in
+venv/lib/python3.10/site-packages/jinja2/loaders.py:    :param searchpath: A path, or list of paths, to the directory that
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        searchpath: t.Union[
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        if not isinstance(searchpath, abc.Iterable) or isinstance(searchpath, str):
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            searchpath = [searchpath]
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        self.searchpath = [os.fspath(p) for p in searchpath]
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        for searchpath in self.searchpath:
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            # segments breaking out of the search directory.
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            filename = posixpath.join(searchpath, *pieces)
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        for searchpath in self.searchpath:
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            walk_dir = os.walk(searchpath, followlinks=self.followlinks)
+venv/lib/python3.10/site-packages/jinja2/loaders.py:                        os.path.join(dirpath, filename)[len(searchpath) :]
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            pkgdir = next(iter(spec.submodule_search_locations))  # type: ignore
+venv/lib/python3.10/site-packages/jinja2/loaders.py:            if spec.submodule_search_locations:
+venv/lib/python3.10/site-packages/jinja2/loaders.py:                roots.extend(spec.submodule_search_locations)
+venv/lib/python3.10/site-packages/jinja2/loaders.py:        # segments breaking out of the search directory. Use normpath to
+venv/lib/python3.10/site-packages/jinja2/ext.py:    :param comment_tags: a list of translator tags to search for and include
+venv/lib/python3.10/site-packages/jinja2/utils.py:            match = re.search(r"([)>.,\n]|&gt;)+$", middle)
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:            searchIndex = min(numbers.index(self.DOT_CHAR) + 4, len(numbers) - 1)
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:            while numbers[searchIndex] != self.DOT_CHAR:
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:                if numbers[searchIndex] == self.ZERO_CHAR:
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:                    del numbers[searchIndex]
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:                searchIndex -= 1
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:            searchIndex += 1
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:            if searchIndex < len(numbers):
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:                if numbers[searchIndex] == self.Z_CHAR:
+venv/lib/python3.10/site-packages/pyasn1/codec/cer/encoder.py:                    del numbers[searchIndex - 1]
+venv/lib/python3.10/site-packages/pyasn1/type/univ.py:            If :obj:`True`, search for matching *tagSet* recursively.
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=Hellenic Academic and Research Institutions RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=Hellenic Academic and Research Institutions RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Label: "Hellenic Academic and Research Institutions RootCA 2015"
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=Hellenic Academic and Research Institutions ECC RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=Hellenic Academic and Research Institutions ECC RootCA 2015 O=Hellenic Academic and Research Institutions Cert. Authority
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Label: "Hellenic Academic and Research Institutions ECC RootCA 2015"
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=ISRG Root X1 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=ISRG Root X1 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=HARICA TLS RSA Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=HARICA TLS RSA Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=HARICA TLS ECC Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=HARICA TLS ECC Root CA 2021 O=Hellenic Academic and Research Institutions CA
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Issuer: CN=ISRG Root X2 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/certifi/cacert.pem:# Subject: CN=ISRG Root X2 O=Internet Security Research Group
+venv/lib/python3.10/site-packages/setuptools/command/easy_install.py:        ("upgrade", "U", "force upgrade (searches PyPI for latest versions)"),
+venv/lib/python3.10/site-packages/setuptools/command/easy_install.py:        ("find-links=", "f", "additional URL(s) to search for packages"),
+venv/lib/python3.10/site-packages/setuptools/command/easy_install.py:                self.index_url, search_path=self.shadow_path, hosts=hosts,
+venv/lib/python3.10/site-packages/setuptools/command/easy_install.py:        has_path_sep = re.search(r'[\\/]', name)
+venv/lib/python3.10/site-packages/setuptools/command/bdist_egg.py:    and found on the default search path).  If neither tool is available,
+venv/lib/python3.10/site-packages/setuptools/__init__.py:        'where' is the root directory which will be searched for packages.  It
+venv/lib/python3.10/site-packages/setuptools/__init__.py:                # Keep searching subdirectories, as there may be more packages
+venv/lib/python3.10/site-packages/setuptools/package_index.py:            match = HREF.search(page, pos)
+venv/lib/python3.10/site-packages/setuptools/package_index.py:        match = cls.pattern.search(fragment)
+venv/lib/python3.10/site-packages/setuptools/package_index.py:    def scan_egg_links(self, search_path):
+venv/lib/python3.10/site-packages/setuptools/package_index.py:        dirs = filter(os.path.isdir, search_path)
+venv/lib/python3.10/site-packages/setuptools/package_index.py:            # We couldn't find the target package, so search the index page too
+venv/lib/python3.10/site-packages/setuptools/package_index.py:        """Add `urls` to the list that will be prescanned for searches"""
+venv/lib/python3.10/site-packages/setuptools/package_index.py:        searched for in the (online) package index as well as the locally
+venv/lib/python3.10/site-packages/setuptools/package_index.py:                if re.search(r'<title>([^- ]+ - )?Revision \d+:', line):
+venv/lib/python3.10/site-packages/setuptools/dist.py:        string), those names will be searched for in every package, in addition
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:            # Otherwise we need to advance the parent iterator to search for
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:    This is useful for contextualizing the results of a search function.
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:    that many items. This enables searching for sub-sequences:
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:    that many items. This enables searching for sub-sequences:
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:    If *iterable* is reversible, ``rlocate`` will reverse it and search from
+venv/lib/python3.10/site-packages/setuptools/_vendor/more_itertools/more.py:    the right. Otherwise, it will search from the left and return the results
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:    def searchString( self, instring, maxMatches=_MAX_INT ):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        C{maxMatches} argument, to clip searching after 'n' matches are found.
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:            print(cap_word.searchString("More than Iron, more than Lead, more than Gold I need Electricity"))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:            print(sum(cap_word.searchString("More than Iron, more than Lead, more than Gold I need Electricity")))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(qs.searchString('lsjdf "This is the quote" sldjf'))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(complex_qs.searchString('lsjdf {{This is the "quote"}} sldjf'))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(sql_qs.searchString('lsjdf "This is the quote with ""embedded"" quotes" sldjf'))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for t in (LineStart() + 'AAA' + restOfLine).searchString(test):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789"))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789")) #  Fail! -> [['123'], ['3'], ['1416'], ['789']]
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(number.searchString("123 3.1416 789")) #  Better -> [['123'], ['3.1416'], ['789']]
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for tkt in ticket_expr.searchString(report):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        print(comparison_expr.searchString("B = 12  AA=23 B<=AA AA>12"))
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:            print(patt.searchString(src)[0])
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for match in locatedExpr(wd).searchString("ljsdf123lksdjjf123lkkjj1222"):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for link in link_expr.searchString(text):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for grid_header in grid_expr.searchString(html):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for div_header in div_expr.searchString(html):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for grid_header in grid_expr.searchString(html):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for div_header in div_expr.searchString(html):
+venv/lib/python3.10/site-packages/setuptools/_vendor/pyparsing.py:        for func in c_function.searchString(source_code):
+venv/lib/python3.10/site-packages/setuptools/_vendor/packaging/specifiers.py:        match = self._regex.search(spec)
+venv/lib/python3.10/site-packages/setuptools/_vendor/packaging/specifiers.py:        match = _prefix_regex.search(item)
+venv/lib/python3.10/site-packages/setuptools/_vendor/packaging/version.py:        match = self._regex.search(version)
+venv/lib/python3.10/site-packages/setuptools/extern/__init__.py:    def search_path(self):
+venv/lib/python3.10/site-packages/setuptools/extern/__init__.py:        Iterate over the search path to locate and load fullname.
+venv/lib/python3.10/site-packages/setuptools/extern/__init__.py:        for prefix in self.search_path:
+venv/lib/python3.10/site-packages/setuptools/config.py:    :param bool find_others: Whether to search for other configuration files
+venv/lib/python3.10/site-packages/setuptools/msvc.py:            # First search in known VS paths
+venv/lib/python3.10/site-packages/setuptools/msvc.py:            # Else, search with path from registry
+venv/lib/python3.10/site-packages/setuptools/_imp.py:    if not spec.has_location and hasattr(spec, 'submodule_search_locations'):
+venv/lib/python3.10/site-packages/setuptools/depends.py:    """Find 'module' by searching 'paths', and extract 'symbol'
+venv/lib/python3.10/site-packages/setuptools/glob.py:        match = magic_check_bytes.search(s)
+venv/lib/python3.10/site-packages/setuptools/glob.py:        match = magic_check.search(s)
+venv/lib/python3.10/site-packages/setuptools/_distutils/msvccompiler.py:              "don't know how to set runtime library search path for MSVC++")
+venv/lib/python3.10/site-packages/setuptools/_distutils/msvccompiler.py:        MSVC program search paths from the registry; next, the directories
+venv/lib/python3.10/site-packages/setuptools/_distutils/_msvccompiler.py:    MSVC program search paths from the registry; next, the directories
+venv/lib/python3.10/site-packages/setuptools/_distutils/_msvccompiler.py:              "don't know how to set runtime library search path for MSVC")
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/install.py:                       "Python's module search path (sys.path) -- "
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/install.py:                       "you'll have to change the search path yourself"),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/config.py:         "list of directories to search for header files"),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/config.py:         "directories to search for external C libraries"),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/config.py:    # XXX need access to the header search path and maybe default macros.
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/config.py:    def search_cpp(self, pattern, body=None, headers=None, include_dirs=None,
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/config.py:                if pattern.search(line):
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py:         "list of directories to search for header files" + sep_by),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py:         "directories to search for external C libraries" + sep_by),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py:         "directories to search for shared C libraries at runtime"),
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py:        # etc.) are in the include search path.
+venv/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py:        # directory where we put them is in the library search path for
+venv/lib/python3.10/site-packages/setuptools/_distutils/archive_util.py:    (if installed and found on the default search path).  If neither tool is
+venv/lib/python3.10/site-packages/setuptools/_distutils/sysconfig.py:            m = _findvar1_rx.search(value) or _findvar2_rx.search(value)
+venv/lib/python3.10/site-packages/setuptools/_distutils/sysconfig.py:        m = _findvar1_rx.search(s) or _findvar2_rx.search(s)
+venv/lib/python3.10/site-packages/setuptools/_distutils/filelist.py:            if pattern_re.search(name):
+venv/lib/python3.10/site-packages/setuptools/_distutils/filelist.py:            if pattern_re.search(self.files[i]):
+venv/lib/python3.10/site-packages/setuptools/_distutils/dist.py:        # are searched for.  The factory for command 'foo' is expected
+venv/lib/python3.10/site-packages/setuptools/_distutils/dist.py:        # named here.  This list is searched from the left; an error
+venv/lib/python3.10/site-packages/setuptools/_distutils/dist.py:        # searched for.  (Always access using get_command_packages().)
+venv/lib/python3.10/site-packages/setuptools/_distutils/msvc9compiler.py:            if re.search(pattern, manifest_buf) is None:
+venv/lib/python3.10/site-packages/setuptools/_distutils/msvc9compiler.py:              "don't know how to set runtime library search path for MSVC++")
+venv/lib/python3.10/site-packages/setuptools/_distutils/msvc9compiler.py:        MSVC program search paths from the registry; next, the directories
+venv/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py:  * include search directories specified with -Idir
+venv/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py:  * library search directories specified with -Ldir
+venv/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py:        # directories searched for dependencies when a dynamic library
+venv/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py:            # for programs that are being built with an SDK and searching
+venv/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py:            m = re.search(r'-isysroot\s*(\S+)', cflags)
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:    #   * can't completely override the include or library searchg
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:    #     library search path anyways.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        # 'include_dirs': a list of directories to search for include files
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        # 'library_dirs': a list of directories to search for libraries
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        # 'runtime_library_dirs': a list of directories to search for
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Add 'dir' to the list of directories that will be searched for
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        header files.  The compiler is instructed to search directories in
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Set the list of directories that will be searched to 'dirs' (a
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        search by default.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Add 'dir' to the list of directories that will be searched for
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        linker will be instructed to search for libraries in the order they
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Set the list of library search directories to 'dirs' (a list of
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        strings).  This does not affect any standard library search path
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        that the linker may search by default.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Add 'dir' to the list of directories that will be searched for
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        """Set the list of directories to search for shared libraries at
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        standard search path that the runtime linker may search by
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        directories to add to the default include file search path for this
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        specific directory rather than searching all the normal locations.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        search for libraries that were specified as bare library names
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        to search for other shared libraries that *it* depends on at
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        directories searched for libraries.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:        directories searched for runtime libraries.
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:    names to be added to the header file search path (-I).  Returns a list
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:    """Generate linker options for searching library directories and
+venv/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py:    respectively, lists of library names (not filenames!) and search
+venv/lib/python3.10/site-packages/setuptools/_distutils/spawn.py:Also provides the 'find_executable()' to search the path for a given
+venv/lib/python3.10/site-packages/setuptools/_distutils/spawn.py:def spawn(cmd, search_path=1, verbose=0, dry_run=0, env=None):
+venv/lib/python3.10/site-packages/setuptools/_distutils/spawn.py:    If 'search_path' is true (the default), the system's executable
+venv/lib/python3.10/site-packages/setuptools/_distutils/spawn.py:    search path will be used to find the program; otherwise, cmd[0]
+venv/lib/python3.10/site-packages/setuptools/_distutils/spawn.py:    if search_path:
+venv/lib/python3.10/site-packages/setuptools/_distutils/cygwinccompiler.py:    result = RE_VERSION.search(out_string)
+venv/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:    def spawn(self, cmd, search_path=1, level=1):
+venv/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:        spawn(cmd, search_path, dry_run=self.dry_run)
+venv/lib/python3.10/site-packages/setuptools/_distutils/extension.py:        list of directories to search for C/C++ header files (in Unix
+venv/lib/python3.10/site-packages/setuptools/_distutils/extension.py:        list of directories to search for C/C++ libraries at link time
+venv/lib/python3.10/site-packages/setuptools/_distutils/extension.py:        list of directories to search for C/C++ libraries at run time
+venv/lib/python3.10/site-packages/urllib3/util/connection.py:    will perform a DNS search for both IPv6 and IPv4 records."""
+venv/lib/python3.10/site-packages/urllib3/util/selectors.py:        search in case the object is invalid but we still
+venv/lib/python3.10/site-packages/urllib3/packages/six.py:    __spec__.submodule_search_locations = []  # PEP 451 @UndefinedVariable
+venv/lib/python3.10/site-packages/cryptography/hazmat/primitives/serialization/ssh.py:    m = _PEM_RC.search(data)
+venv/lib/python3.10/site-packages/six.py:    __spec__.submodule_search_locations = []  # PEP 451 @UndefinedVariable
+venv/lib/python3.10/site-packages/yaml/reader.py:        match = self.NON_PRINTABLE.search(data)
+venv/lib/python3.10/site-packages/blinker/base.py:        search.
+venv/lib/python3.10/site-packages/pydantic/main.py:                        value = alias.search_dict_for_path(values)
+venv/lib/python3.10/site-packages/pydantic/aliases.py:    def search_dict_for_path(self, d: dict) -> Any:
+venv/lib/python3.10/site-packages/pydantic/_internal/_typing_extra.py:        search order is locals first, then globals.
+venv/lib/python3.10/site-packages/pydantic/_internal/_typing_extra.py:          to have globals, an empty dictionary is used.  For classes, the search
+venv/lib/python3.10/site-packages/pydantic/_internal/_decorators.py:        tp: The type or class to search for the attribute. If a tuple, this is treated as a set of base classes.
+venv/lib/python3.10/site-packages/pydantic/_internal/_decorators.py:        tp: The type or class to search for the attribute.
+venv/lib/python3.10/site-packages/pydantic/networks.py:- `query`: optional URL query (for example, `GET` arguments or "search string", such as `query=here`).
+venv/lib/python3.10/site-packages/pydantic/alias_generators.py:    if re.match('^[a-z]+[A-Za-z0-9]*$', snake) and not re.search(r'\d[a-z]', snake):
+venv/lib/python3.10/site-packages/pydantic/v1/typing.py:        Recursively searches for `str` type hints and replaces them with ForwardRef.
+venv/lib/python3.10/site-packages/pydantic/errors.py:            name = re.search(r".*'(.+?)'", str(name_error)).group(1)  # type: ignore[union-attr]
+venv/lib/python3.10/site-packages/pydantic/type_adapter.py:            _parent_depth: depth at which to search the parent namespace to construct the local namespace.
+venv/lib/python3.10/site-packages/pycodestyle-2.6.0.dist-info/METADATA:* An internal bisect search has replaced a linear search in order to improve
+venv/lib/python3.10/site-packages/pycodestyle.py:        return False  # invalid syntax: EOF while searching for def/class
+venv/lib/python3.10/site-packages/pycodestyle.py:            lambda_kw = LAMBDA_REGEX.search(line, 0, found)
+venv/lib/python3.10/site-packages/pycodestyle.py:    match = not noqa and COMPARE_SINGLETON_REGEX.search(logical_line)
+venv/lib/python3.10/site-packages/pycodestyle.py:    match = COMPARE_NEGATIVE_REGEX.search(logical_line)
+venv/lib/python3.10/site-packages/pycodestyle.py:    match = COMPARE_TYPE_REGEX.search(logical_line)
+venv/lib/python3.10/site-packages/pycodestyle.py:noqa = lru_cache(512)(re.compile(r'# no(?:qa|pep8)\b', re.I).search)

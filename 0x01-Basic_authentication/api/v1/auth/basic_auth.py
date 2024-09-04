@@ -2,6 +2,8 @@
 """module creates a BasicAuth class"""
 
 from api.v1.auth.auth import Auth
+from models.user import User
+from typing import TypeVar
 import base64
 
 
@@ -47,3 +49,21 @@ class BasicAuth(Auth):
         user_credentials = decoded_base64_authorization_header.rsplit(":")
         email, password = user_credentials[0], user_credentials[1]
         return (email, password)
+
+    def user_object_from_credentials(self, user_email: str,
+                                     user_pwd: str) -> TypeVar('User'):
+        """returns User instance based on their email and password"""
+        if user_email is None or not isinstance(user_email, str):
+            return None
+        if user_pwd is None or not isinstance(user_pwd, str):
+            return None
+        user_data = User.search({'email': user_email})
+        if not user_data:
+            return None
+        if isinstance(user_data, list) and user_data:
+            user = user_data[0]
+        else:
+            user = None
+        if user and user.is_valid_password(user_pwd):
+            return user
+        return None
