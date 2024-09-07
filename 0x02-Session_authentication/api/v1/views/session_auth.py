@@ -7,6 +7,7 @@ to /auth_session/login for session authentication
 from flask import request, jsonify, abort
 from models.user import User
 from api.v1.views import app_views
+from api.v1.app import auth
 import os
 
 
@@ -49,8 +50,6 @@ def logout():
     """
     function handles DELETE request to /auth_session/logout
     """
-    from api.v1.app import auth
-    value_of_destroy = auth.destroy_session(request)
-    if value_of_destroy is False:
+    if not auth.destroy_session(request):
         abort(404)
     return jsonify({}), 200
