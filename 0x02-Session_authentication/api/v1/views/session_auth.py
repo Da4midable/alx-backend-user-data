@@ -11,7 +11,7 @@ import os
 
 
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
-def user_session():
+def login():
     """
     function handles POST request to /auth_session/login
     for session authentication
