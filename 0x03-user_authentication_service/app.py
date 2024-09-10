@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module sets up a basic Flask app."""
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response, abort
 from auth import Auth
 
 
@@ -20,18 +20,22 @@ def simple_message():
 
 
 @app.route('/users', methods=['POST'])
-def register_user():
-    email = request.form.get('email')
-    password = request.form.get('password')
+def users() -> Response:
+    
+    if request.method == 'POST':
+        unstripped_email = request.form.get('email')
+        unstripped_password = request.form.get('password')
 
-    if not email or not password:
-        return jsonify({"message": "email and password required"}), 400
+        email = unstripped_email.strip()
+        password = unstripped_password.strip()
 
     try:
         AUTH.register_user(email, password)
-        return jsonify({"email": email, "message": "user created"}), 201
-    except Exception as e:
-        return jsonify({"message": "email already registered"}), 400
+        return jsonify({"email": email, "message": "user created"})
+    except Exception:
+        return jsonify({"message": "email already registered"})
+    else:
+        abort(400)
 
 
 if __name__ == "__main__":
