@@ -4,17 +4,10 @@ This module defines a SQLAlchemy ORM model for a User.
 """
 
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.ext.declarative import declarative_base
 
 
-class Base(DeclarativeBase):
-    """
-    Base class for declarative SQLAlchemy models.
-
-    This class uses the DeclarativeBase from SQLAlchemy ORM to provide
-    a base for declarative class definitions.
-    """
-    pass
+Base = declarative_base()
 
 
 class User(Base):
@@ -30,5 +23,5 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)
     hashed_password = Column(String(250), nullable=False)
-    session_id = Column(String(250))
-    reset_token = Column(String(250))
+    session_id = Column(String(250), nullable=True)
+    reset_token = Column(String(250), nullable=True)
