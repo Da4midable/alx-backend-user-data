@@ -48,13 +48,13 @@ class DB:
         :raises NoResultFound: If no user is found
         :raises InvalidRequestError: If invalid query arguments are passed
         """
-        try:
-            user = self._session.query(User).filter_by(**kwargs).first()
+        for key in kwargs.keys():
+            if not hasattr(User, key):
+                raise InvalidRequestError()
+        user = self._session.query(User).filter_by(**kwargs).first()
+        if user:
             return user
-        except NoResultFound:
-            raise NoResultFound()
-        except InvalidRequestError:
-            raise InvalidRequestError()
+        raise NoResultFound()
 
     def update_user(self, user_id: int, **kwargs) -> None:
         """
@@ -73,9 +73,7 @@ class DB:
                     setattr(user, key, value)
                 else:
                     raise ValueError
-
             self._session.commit()
-
         except NoResultFound:
             raise NoResultFound
         except InvalidRequestError as e:
