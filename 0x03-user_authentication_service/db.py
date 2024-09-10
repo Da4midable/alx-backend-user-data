@@ -50,11 +50,11 @@ class DB:
         """
         for key in kwargs.keys():
             if not hasattr(User, key):
-                raise InvalidRequestError()
+                raise InvalidRequestError
         user = self._session.query(User).filer_by(**kwargs).first()
         if user:
             return user
-        raise NoResultFound()
+        raise NoResultFound
 
     def update_user(self, user_id: int, **kwargs) -> None:
         """
