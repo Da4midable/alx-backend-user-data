@@ -2,9 +2,9 @@
 """Module sets up a basic Flask app."""
 
 from flask import Flask, jsonify, request
-from auth import Auth, _hash_password
-from db import DB
-from user import User
+from auth import Auth
+
+
 AUTH = Auth()
 app = Flask(__name__)
 
@@ -19,16 +19,18 @@ def simple_message():
     return jsonify({"message": "Bienvenue"})
 
 
-@app.route('/users', methods=['POST'], strict_slashes=False)
-def users():
-    """end-point that registers a user"""
+@app.route('/users', methods=['POST'])
+def register_user():
     email = request.form.get('email')
     password = request.form.get('password')
+
+    if not email or not password:
+        return jsonify({"message": "email and password required"}), 400
 
     try:
         AUTH.register_user(email, password)
         return jsonify({"email": email, "message": "user created"}), 201
-    except ValueError:
+    except Exception as e:
         return jsonify({"message": "email already registered"}), 400
 
 
