@@ -48,21 +48,12 @@ class DB:
         :raises NoResultFound: If no user is found
         :raises InvalidRequestError: If invalid query arguments are passed
         """
-        session = self._session
-
         try:
-            query = session.query(User).filter_by(**kwargs)
-            user = query.one()
-
-            if user is None:
-                raise NoResultFound()
-
+            user = self._session.query(User).filter_by(**kwargs).one()
             return user
-
         except NoResultFound:
             raise NoResultFound()
-
-        except Exception:
+        except InvalidRequestError:
             raise InvalidRequestError()
 
     def update_user(self, user_id: int, **kwargs) -> None:
