@@ -52,7 +52,7 @@ class DB:
 
         try:
             query = session.query(User).filter_by(**kwargs)
-            user = query.first()
+            user = query.one()
 
             if user is None:
                 raise NoResultFound()
