@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """DB module
 """
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, and_, tuple_
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
@@ -34,27 +34,30 @@ class DB:
 
     def add_user(self, email: str, hashed_password: str) -> User:
         """Add a new user to the database"""
-        user = User(email=email, hashed_password=hashed_password)
-        self._session.add(user)
-        self._session.commit()
-        return user
+        try:
+            new_user = User(email=email, hashed_password=hashed_password)
+            self._session.add(new_user)
+            self._session.commit()
+        except Exception:
+            self.__session.rollback()
+            new_user = None
+        return new_user
 
     def find_user_by(self, **kwargs) -> User:
         """
-        Finds a user by keyword arguments.
-
-        :param kwargs: Arbitrary keyword arguments to filter the user
-        :return: User object
-        :raises NoResultFound: If no user is found
-        :raises InvalidRequestError: If invalid query arguments are passed
+        Find a user based on filter criteria.
         """
-        for key in kwargs.keys():
-            if not hasattr(User, key):
-                raise InvalidRequestError
-        user = self._session.query(User).filter_by(**kwargs).first()
-        if user:
-            return user
-        raise NoResultFound
+        invalid_keys = [key for key in kwargs if not hasattr(User, key)]
+        if invalid_keys:
+            raise InvalidRequestError()
+
+        filters = [getattr(User, key) == value for key,
+                   value in kwargs.items()]
+
+        result = self._session.query(User).filter(and_(*filters)).first()
+        if result is None:
+            raise NoResultFound()
+        return result
 
     def update_user(self, user_id: int, **kwargs) -> None:
         """
