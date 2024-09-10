@@ -33,13 +33,10 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
-        """Adds a new user to the database and returns the User object"""
-        session = self._session
-        if session is None:
-            raise ValueError("Session is None")
+        """Add a new user to the database"""
         new_user = User(email=email, hashed_password=hashed_password)
-        session.add(new_user)
-        session.commit()
+        self._session.add(new_user)
+        self._session.commit()
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
