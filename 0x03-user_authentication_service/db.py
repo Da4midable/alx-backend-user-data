@@ -34,10 +34,10 @@ class DB:
 
     def add_user(self, email: str, hashed_password: str) -> User:
         """Add a new user to the database"""
-        new_user = User(email=email, hashed_password=hashed_password)
-        self._session.add(new_user)
+        user = User(email=email, hashed_password=hashed_password)
+        self._session.add()
         self._session.commit()
-        return new_user
+        return user
 
     def find_user_by(self, **kwargs) -> User:
         """
@@ -48,14 +48,13 @@ class DB:
         :raises NoResultFound: If no user is found
         :raises InvalidRequestError: If invalid query arguments are passed
         """
-        users = self._session.query(User)
-        for key, value in kwargs.items():
-            if key not in User.__dict__:
-                raise InvalidRequestError
-            for user in users:
-                if getattr(user, key) == value:
-                    return user
-                raise NoResultFound
+        for key in kwargs.keys():
+            if not hasattr(User, key):
+                raise InvalidRequestError()
+        user = self._session.query(User).filer_by(**kwargs).first()
+        if user:
+            return user
+        raise NoResultFound()
 
     def update_user(self, user_id: int, **kwargs) -> None:
         """

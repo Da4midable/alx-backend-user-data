@@ -9,8 +9,8 @@ AUTH = Auth()
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'], strict_slashes=False)
-def simple_message():
+@app.route('/')
+def simple_message() -> Response:
     """
     return a JSON payload of the form:
 
