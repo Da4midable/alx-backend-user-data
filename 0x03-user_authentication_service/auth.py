@@ -4,6 +4,7 @@ defines a _hash_password method that takes in
 a password string arguments and returns bytes.
 """
 
+import uuid
 import bcrypt
 from user import User
 from sqlalchemy.orm.exc import NoResultFound
@@ -19,6 +20,9 @@ def _hash_password(password: str) -> bytes:
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
     return hashed_password
 
+def _generate_uuid():
+    "generates a uuid4 module"
+    return str(uuid.uuid4())
 
 class Auth:
     """Auth class to interact with the authentication database.
