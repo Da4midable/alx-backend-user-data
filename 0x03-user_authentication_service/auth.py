@@ -33,6 +33,15 @@ class Auth:
         """class constructor"""
         self._db = DB()
 
+    def create_session(self, email: str) -> str:
+        try:
+            user_email = self._db.find_user_by(email=email)
+            if user_email:
+                user_email.session_id = _generate_uuid()
+                return user_email.session_id
+        except NoResultFound:
+            return None
+
     def register_user(self, email: str, password: str) -> User:
         """registers user"""
         try:
