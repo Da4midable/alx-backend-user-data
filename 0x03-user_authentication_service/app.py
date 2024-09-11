@@ -21,21 +21,17 @@ def simple_message() -> Response:
 
 @app.route('/users', methods=['POST'])
 def users() -> Response:
-    
-    if request.method == 'POST':
-        unstripped_email = request.form.get('email')
-        unstripped_password = request.form.get('password')
-
-        email = unstripped_email.strip()
-        password = unstripped_password.strip()
+    """
+    Rgisters user
+    """
+    email = request.form.get('email')
+    password = request.form.get('password')
 
     try:
         AUTH.register_user(email, password)
         return jsonify({"email": email, "message": "user created"})
-    except Exception:
-        return jsonify({"message": "email already registered"})
-    else:
-        abort(400)
+    except ValueError:
+        return jsonify({"message": "email already registered"}), 400
 
 
 if __name__ == "__main__":
