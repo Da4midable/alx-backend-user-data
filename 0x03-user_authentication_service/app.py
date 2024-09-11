@@ -2,6 +2,7 @@
 """Module sets up a basic Flask app."""
 
 from flask import Flask, jsonify, request, Response, abort, make_response
+from flask import redirect
 from auth import Auth
 
 
@@ -51,6 +52,25 @@ def login():
     session_id = AUTH.create_session(email)
     response = make_response(jsonify({"email": email, "message": "logged in"}))
     response.set_cookie('session_id', session_id)
+    return response
+
+
+@app.route('/sessions', methods=['DELETE'])
+def logout():
+    """Logout user by deleting session"""
+    session_id = request.cookies.get('session_id')
+
+    if session_id is None:
+        abort(403)
+
+    user = AUTH.get_user_from_session_id(session_id)
+
+    if not user:
+        abort(403)
+
+    AUTH.destroy_session(user.id)
+    response = redirect('/')
+    response.delete_cookie('session_id')
     return response
 
 
