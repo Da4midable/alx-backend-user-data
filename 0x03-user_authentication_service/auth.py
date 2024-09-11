@@ -7,6 +7,7 @@ a password string arguments and returns bytes.
 import uuid
 import bcrypt
 from user import User
+from typing import Optional
 from sqlalchemy.orm.exc import NoResultFound
 from db import DB
 
@@ -63,3 +64,10 @@ class Auth:
         except NoResultFound:
             return False
         return False
+
+    def get_user_from_session_id(self, session_id: str) -> Optional[User]:
+        """finds user by session ID"""
+        user = self._db.find_user_by(session_id=session_id)
+        if not user or session_id is None:
+            return None
+        return user
