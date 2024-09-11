@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module sets up a basic Flask app."""
 
-from flask import Flask, jsonify, request, Response, abort
+from flask import Flask, jsonify, request, Response, abort, make_response
 from auth import Auth
 
 
@@ -22,7 +22,7 @@ def simple_message() -> Response:
 @app.route('/users', methods=['POST'])
 def users() -> Response:
     """
-    Rgisters user
+    Registers user
     """
     email = request.form.get('email')
     password = request.form.get('password')
@@ -32,6 +32,26 @@ def users() -> Response:
         return jsonify({"email": email, "message": "user created"})
     except ValueError:
         return jsonify({"message": "email already registered"}), 400
+
+
+@app.route('/sessions', methods=['POST'])
+def login():
+    """creates a new session for the user, store it the session ID as a cookie
+    with key "session_id" on the response
+    If login information is incorrect, flask aborts with a 401 HTTP status.
+    Return:
+    a JSON payload of the form
+    """
+    email = request.form.get('email')
+    password = request.form.get('password')
+
+    if not AUTH.valid_login(email, password):
+        abort(401)
+
+    session_id = AUTH.create_session(email)
+    response = make_response(jsonify({"email": email, "message": "logged in"}))
+    response.set_cookie('session_id', session_id)
+    return response
 
 
 if __name__ == "__main__":
