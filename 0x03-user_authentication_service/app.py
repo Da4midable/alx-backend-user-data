@@ -4,6 +4,8 @@
 from flask import Flask, jsonify, request, Response, abort, make_response
 from flask import redirect
 from auth import Auth
+from sqlalchemy.exc import InvalidRequestError
+from sqlalchemy.orm.exc import NoResultFound
 
 
 AUTH = Auth()
@@ -97,6 +99,21 @@ def get_reset_password_token():
         reset_token = AUTH.get_reset_password_token(email)
         return jsonify({"email": email, "reset_token": reset_token}), 200
     except ValueError:
+        abort(403)
+
+
+@app.route('/reset_password', methods=['PUT'])
+def update_password():
+    """PUT request gets reset_password token"""
+    try:
+        email = request.form.get('email')
+        reset_token = request.form.get('reset_token')
+        new_password = request.form.get('new_password')
+        AUTH.update_password(reset_token, new_password)
+        return jsonify({"email": email, "message": "Password updated"}), 200
+    except NoResultFound:
+        abort(403)
+    except InvalidRequestError:
         abort(403)
 
 
