@@ -34,6 +34,7 @@ class Auth:
         self._db = DB()
 
     def create_session(self, email: str) -> str:
+        """creates session by email"""
         try:
             user_email = self._db.find_user_by(email=email)
             if user_email:
